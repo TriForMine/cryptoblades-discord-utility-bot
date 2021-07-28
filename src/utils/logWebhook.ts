@@ -5,6 +5,7 @@ import {
 } from "../../deps.ts";
 import { Embed } from "./Embed.ts";
 
+/*
 export async function logWebhook(payload: Interaction) {
   const webhook = Deno.env.get("DISCORD_LOGS_WEBHOOK");
   if (!webhook) return;
@@ -23,3 +24,4 @@ export async function logWebhook(payload: Interaction) {
     embeds: [embed],
   });
 }
+*/

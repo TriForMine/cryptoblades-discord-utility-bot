@@ -26,10 +26,10 @@ export const PermissionLevelHandlers: Record<
 > = {
   MEMBER: () => true,
   MODERATOR: (payload) => Boolean(payload.member?.permissions) &&
-  validatePermissions(payload.member!.permissions, ["MANAGE_GUILD"]),
+  validatePermissions(BigInt(payload.member!.permissions), ["MANAGE_GUILD"]),
   ADMIN: (payload) =>
     Boolean(payload.member?.permissions) &&
-    validatePermissions(payload.member!.permissions, ["ADMINISTRATOR"]),
+    validatePermissions(BigInt(payload.member!.permissions), ["ADMINISTRATOR"]),
   // TODO: Add your user id here and anyone else you want to give access to.
   BOT_OWNERS: (payload) => [""].includes(payload.member?.user.id || payload.user?.id!),
 };

@@ -15,6 +15,7 @@ const command: Command = {
     },
   ],
   execute: async function (payload) {
+    // @ts-ignore
     const arg = payload.data?.options?.[0];
     const value = (arg?.value || "") as string;
     if (!value) {

@@ -14,8 +14,10 @@ const command: Command = {
     },
   ],
   execute: function (payload) {
+    // @ts-ignore
     const arg = payload.data?.options?.[0];
     const userId = (arg?.value || "") as string;
+    // @ts-ignore
     const targetUser = payload.data?.resolved?.users?.[userId] ||
       payload.member?.user || payload.user!;
 
